@@ -1,11 +1,13 @@
 
 INSTALLATION
+------------
 
 You should first install the dependencies:
 
-    sudo cpan Dancer YAML JSON JSON::XS Template Crypt::Simple List::UtilsBy LWP
+    sudo cpan Crypt::Simple Dancer JSON JSON::XS List::UtilsBy LWP Plack Template YAML
 
 DEPLOYMENT
+----------
 
 The easiest way to deploy is:
 

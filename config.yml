@@ -2,10 +2,10 @@
 # env-related settings should go to environments/$env.yml
 # all the settings in this file will be loaded at Dancer's startup.
 
-appname: "Pequod"
+appname: racknotes mobile
 
 # The default layout (located in views/layouts/main.tt)
-layout: "main"
+layout: main
 
 charset: "UTF-8"
 
@@ -13,13 +13,13 @@ charset: "UTF-8"
 # simple: default and very basic template engine
 # template_toolkit: TT
 
-template: "template_toolkit"
+template: template_toolkit
 engines:
   template_toolkit:
-    encoding:  'utf8'
+    encoding:  utf8
     start_tag: '[%'
     end_tag:   '%]'
 
 session: YAML
 
-behind_proxy: 1
+#behind_proxy: 1
