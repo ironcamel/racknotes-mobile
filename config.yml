@@ -1,0 +1,25 @@
+# This is the main configuration file.
+# env-related settings should go to environments/$env.yml
+# all the settings in this file will be loaded at Dancer's startup.
+
+appname: "Pequod"
+
+# The default layout (located in views/layouts/main.tt)
+layout: "main"
+
+charset: "UTF-8"
+
+# template engine
+# simple: default and very basic template engine
+# template_toolkit: TT
+
+template: "template_toolkit"
+engines:
+  template_toolkit:
+    encoding:  'utf8'
+    start_tag: '[%'
+    end_tag:   '%]'
+
+session: YAML
+
+behind_proxy: 1

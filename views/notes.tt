@@ -1,0 +1,24 @@
+
+<div data-role="header">
+  <h1>Notes</h1>
+  <a href="/add">Add Note</a>
+</div>
+
+<div data-role="content">
+
+  <ul id="notes_list" data-role="listview" data-theme="c">
+  [% FOREACH note IN notes %]
+    <li>
+      <a href="/notes/[% note.metadata.id %]">
+      <h1>
+        [% note.subject %]
+      </h1>
+      <p>
+        [% note.content %]
+      </p>
+      </a>
+    </li>
+  [% END %]
+  </ul>
+
+</div>

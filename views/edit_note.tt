@@ -1,0 +1,37 @@
+
+<div data-role="header">
+  <h1>Notes</h1>
+</div>
+
+<div data-role="content">
+
+  <form action="/notes" method="post">
+
+    <input type="hidden" name="note_id" value="[% note.metadata.id %]">
+
+    <div data-role="fieldcontain">
+      <label for="note_subject">Subject:</label>
+      <input type="text" name="subject" id="note_subject"
+        value="[% note.subject %]" />
+    </div>  
+    <div data-role="fieldcontain">
+      <label for="note_content">Note:</label>
+      <textarea id="note_content" name="content">[% note.content %]</textarea>
+    </div>  
+
+    [% IF is_new %]
+    <button name="save_note" value="1">Save</button>
+    [% ELSE %]
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <button name="edit_note" value="1">Save</button>
+      </div>
+      <div class="ui-block-b">
+        <button name="delete_note" value="1" data-icon="delete">Delete</button>
+      </div>
+    </div>
+    [% END %]
+
+  </form> 
+
+</div>

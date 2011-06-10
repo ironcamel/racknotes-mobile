@@ -1,0 +1,12 @@
+
+<form action="/login" method="post">
+  <div data-role="fieldcontain">
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" value=""  />
+  </div>  
+  <div data-role="fieldcontain">
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" value=""  />
+  </div>  
+  <input id="login" type="submit" name="login" value="Login" />
+</form> 
