@@ -1,0 +1,26 @@
+
+INSTALLATION
+
+You should first install the dependencies:
+
+    sudo cpan Dancer YAML JSON JSON::XS Template Crypt::Simple List::UtilsBy LWP
+
+DEPLOYMENT
+
+The easiest way to deploy is:
+
+    ./bin/app.pl
+
+That will run the app with a simple, blocking web server. It is fine for
+development, but you will want to use a real web server when running live.
+I prefer something like Starman or Twiggy. For example, to deploy with
+Twiggy, first install it:
+
+    sudo cpan Twiggy
+
+And then run it:
+
+    plackup -s Twiggy -l ./bin/app.pl
+
+See http://p3rl.org/Dancer::Deployment to see more deployment options, such
+as Apache, nginx, lighttpd, etc.
